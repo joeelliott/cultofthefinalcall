@@ -1,3 +1,8 @@
+//
+// subspacesniper sssnipe is a project of the cult of the final call
+// its goal is ridiculous, and as such, ought to be ignored
+// SSS
+// 
 mod gl_setup;
 mod event_handler;
 mod game_logic;

@@ -10,10 +10,10 @@ use gtk::prelude::*;
 use gtk::{Application, ApplicationWindow, GLArea};
 
 fn main() {
-    let app = Application::new(Some("com.example.opengl"), Default::default());
+    let app = Application::new(Some("com.subspacesniper.opengl"), Default::default());
     app.connect_activate(|app| {
         let window = ApplicationWindow::new(app);
-        window.set_title("Rust OpenGL Example");
+        window.set_title("SubSpaceSniper");
         window.set_default_size(800, 600);
 
         let gl_area = GLArea::new();

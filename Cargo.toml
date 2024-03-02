@@ -1,1 +1,4 @@
+[dependencies]
+gtk = "0.9"
+gl = "0.14"
 

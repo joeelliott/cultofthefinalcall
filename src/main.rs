@@ -1,7 +1,12 @@
-//
-// subspacesniper sssnipe is a project of the cult of the final call
+// ███████╗██╗   ██╗██████╗ ███████╗██████╗  █████╗  ██████╗███████╗
+// ██╔════╝██║   ██║██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔════╝██╔════╝
+// ███████╗██║   ██║██████╔╝███████╗██████╔╝███████║██║     █████╗  
+// ╚════██║██║   ██║██╔══██╗╚════██║██╔═══╝ ██╔══██║██║     ██╔══╝  
+// ███████║╚██████╔╝██████╔╝███████║██║     ██║  ██║╚██████╗███████╗
+// ╚══════╝ ╚═════╝ ╚═════╝ ╚══════╝╚═╝     ╚═╝  ╚═╝ ╚═════╝╚══════╝
+// subspace sniper is a project of the cult of the final call
 // its goal is ridiculous, and as such, ought to be ignored
-// SSS
+// s_d
 // 
 mod gl_setup;
 mod event_handler;

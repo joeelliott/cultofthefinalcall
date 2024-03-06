@@ -1,0 +1,92 @@
+use iced::{
+    button, executor, Application, Button, Column, Command, Element, Settings, Text,
+};
+
+pub fn main() -> iced::Result {
+    SubspaceApp::run(Settings::default())
+}
+
+struct SubspaceApp {
+    play_game_button: button::State,
+    play_intro_button: button::State,
+    quick_help_button: button::State,
+    tutorial_button: button::State,
+    options_button: button::State,
+    quit_button: button::State,
+}
+
+#[derive(Debug, Clone)]
+enum Message {
+    PlayGamePressed,
+    PlayIntroPressed,
+    QuickHelpPressed,
+    TutorialPressed,
+    OptionsPressed,
+    QuitPressed,
+}
+
+impl Application for SubspaceApp {
+    type Executor = executor::Default;
+    type Message = Message;
+    type Flags = ();
+
+    fn new(_flags: ()) -> (SubspaceApp, Command<Message>) {
+        (
+            SubspaceApp {
+                play_game_button: button::State::new(),
+                play_intro_button: button::State::new(),
+                quick_help_button: button::State::new(),
+                tutorial_button: button::State::new(),
+                options_button: button::State::new(),
+                quit_button: button::State::new(),
+            },
+            Command::none(),
+        )
+    }
+
+    fn title(&self) -> String {
+        String::from("SUBSPACE")
+    }
+
+    fn update(&mut self, message: Message) -> Command<Message> {
+        match message {
+            Message::PlayGamePressed => {
+                // Logic for PLAY GAME button
+                println!("Play Game pressed");
+            }
+            Message::PlayIntroPressed => {
+                // Logic for PLAY INTRO button
+                println!("Play Intro pressed");
+            }
+            Message::QuickHelpPressed => {
+                // Logic for QUICK HELP button
+                println!("Quick Help pressed");
+            }
+            Message::TutorialPressed => {
+                // Logic for TUTORIAL button
+                println!("Tutorial pressed");
+            }
+            Message::OptionsPressed => {
+                // Logic for OPTIONS button
+                println!("Options pressed");
+            }
+            Message::QuitPressed => {
+                // Logic for QUIT button
+                println!("Quit pressed");
+            }
+        }
+
+        Command::none()
+    }
+
+    fn view(&mut self) -> Element<Message> {
+        Column::new()
+            .push(Button::new(&mut self.play_game_button, Text::new("PLAY GAME"))
+                .on_press(Message::PlayGamePressed))
+            .push(Button::new(&mut self.play_intro_button, Text::new("PLAY INTRO"))
+                .on_press(Message::PlayIntroPressed))
+            // Additional buttons for QUICK HELP, TUTORIAL, OPTIONS, QUIT
+            // ...
+            .into()
+    }
+}
